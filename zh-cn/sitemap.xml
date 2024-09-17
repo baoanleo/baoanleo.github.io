@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://baoanleo.github.io/</loc>
-    <lastmod>2024-09-17T17:46:38+08:00</lastmod>
+    <lastmod>2024-09-17T21:18:46+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -20,11 +20,8 @@
                 href="https://baoanleo.github.io/"
                 />
   </url><url>
-    <loc>https://baoanleo.github.io/p/newnewnew/</loc>
-    <lastmod>2024-09-17T17:46:38+08:00</lastmod>
-  </url><url>
     <loc>https://baoanleo.github.io/post/</loc>
-    <lastmod>2024-09-17T17:46:38+08:00</lastmod>
+    <lastmod>2024-09-17T21:18:46+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -40,6 +37,12 @@
                 hreflang="zh-cn"
                 href="https://baoanleo.github.io/post/"
                 />
+  </url><url>
+    <loc>https://baoanleo.github.io/p/task00/</loc>
+    <lastmod>2024-09-17T21:18:46+08:00</lastmod>
+  </url><url>
+    <loc>https://baoanleo.github.io/p/newnewnew/</loc>
+    <lastmod>2024-09-17T17:46:38+08:00</lastmod>
   </url><url>
     <loc>https://baoanleo.github.io/p/myfirstblog/</loc>
     <lastmod>2024-09-15T20:26:21+08:00</lastmod>
