@@ -297,6 +297,8 @@
     <li><a href="#主要两种请求方式">主要两种请求方式</a></li>
     <li><a href="#各个请求头的含义">各个请求头的含义</a></li>
     <li><a href="#linux操作">linux操作</a></li>
+    <li><a href="#常见url请求协议">常见URL请求协议</a></li>
+    <li><a href="#常见http请求方法">常见HTTP请求方法</a></li>
     <li><a href="#对web的认知">对web的认知</a></li>
   </ol>
 </nav>
@@ -354,7 +356,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 7 分钟
+                    阅读时长: 8 分钟
                 </time>
             </div>
         
@@ -502,6 +504,76 @@ eg：grep [option] pattern file</p>
 密码less登录：ssh-keygen 生成密钥对，ssh-copy-id 将公钥复制到远程服务器
 计划任务
 使用cron：crontab -e 编辑crontab文件，设置定时任务。</li>
+</ul>
+<h2 id="常见url请求协议">常见URL请求协议
+</h2><p>常见URL请求协议主要有以下几种：</p>
+<ol>
+<li>http：超文本传输协议，是互联网上应用最为广泛的网络传输协议。</li>
+<li>https：安全超文本传输协议，是http协议的安全版本，通过SSL/TLS协议加密数据传输。</li>
+<li>FTP：文件传输协议，用于在网络中传输文件。</li>
+<li>FTPS：安全文件传输协议，是FTP协议的安全版本，通过SSL/TLS协议加密数据传输。</li>
+<li>SMTP：简单邮件传输协议，用于发送和接收电子邮件。</li>
+<li>IMAP/POP3：用于接收电子邮件的协议，IMAP用于访问服务器上的邮箱，POP3用于下载邮件到本地。</li>
+</ol>
+<h2 id="常见http请求方法">常见HTTP请求方法
+</h2><ol>
+<li>get：请求获取服务器上的指定资源。</li>
+<li>post：提交数据到服务器，通常用于表单提交或上传文件。</li>
+<li>put：请求服务器存储一个资源或更新现有资源。</li>
+<li>delete：请求服务器删除一个资源。</li>
+<li>head：类似于GET请求，但是只请求头的信息，不请求主体内容。</li>
+<li>options：请求查询服务器的性能和支持的HTTP请求方法。</li>
+<li>patch：对资源进行部分更新。</li>
+</ol>
+<p>GET和POST请求的差别：</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: left"></th>
+          <th style="text-align: left">get</th>
+          <th style="text-align: left">post</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">能被缓存</td>
+          <td style="text-align: left">不能缓存</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">不安全，因为请求时会在url后传参</td>
+          <td style="text-align: left">POST 比 GET 更安全，因为参数不会被保存在浏览器历史或 web 服务器日志中</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">数据在 URL 中对所有人都是可见的。</td>
+          <td style="text-align: left">数据不会显示在 URL 中。</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">有限制。当发送数据时，GET 方法向 URL 添加数据；URL 的长度是受限制的（URL 的最大长度是 2048 个字符）。</td>
+          <td style="text-align: left">无限制。</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">无害</td>
+          <td style="text-align: left">数据会被重新提交（浏览器应该告知用户数据会被重新提交）。</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>日常生活中什么时候会用GET，什么时候会用POST：</p>
+<p>使用get情况：</p>
+<ul>
+<li>浏览网页，请求网页内容，比如在博客网站?id=1是一个用户,?id=2是另一个用户。</li>
+<li>查询天气、股票信息等。</li>
+<li>获取网站的公共数据，如目录、列表等。</li>
+</ul>
+<p>使用post情况包括：</p>
+<ul>
+<li>登录网站，向网站提交用户名和密码。</li>
+<li>提交表单，比如搜索框中的内容、购物车信息和购买的信息等。</li>
+<li>上传文件到服务器上去。</li>
 </ul>
 <h2 id="对web的认知">对web的认知
 </h2><p>Web渗透测试是一个专门研究如何发现和利用Web应用程序中的安全漏洞的领域。它涉及到对Web服务器、应用程序代码、数据库和整体网络环境的安全性评估。Web渗透测试的主要目的是为了发现可能被攻击者利用的漏洞，以便提前进行修复，确保Web系统的安全性。</p>
