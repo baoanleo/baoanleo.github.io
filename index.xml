@@ -7,15 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>cosleo Blog</copyright>
-        <lastBuildDate>Tue, 17 Sep 2024 21:07:00 +0800</lastBuildDate><atom:link href="https://baoanleo.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Task0</title>
-        <link>https://baoanleo.github.io/p/task0/</link>
-        <pubDate>Tue, 17 Sep 2024 21:07:00 +0800</pubDate>
-        
-        <guid>https://baoanleo.github.io/p/task0/</guid>
-        <description></description>
-        </item>
-        <item>
+        <lastBuildDate>Tue, 17 Sep 2024 17:46:38 +0800</lastBuildDate><atom:link href="https://baoanleo.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Newnewnew</title>
         <link>https://baoanleo.github.io/p/newnewnew/</link>
         <pubDate>Tue, 17 Sep 2024 17:46:38 +0800</pubDate>
@@ -463,6 +455,163 @@ $$</description>
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://baoanleo.github.io/p/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://baoanleo.github.io/p/</guid>
+        <description>&lt;h1 id=&#34;task0&#34;&gt;task0
+&lt;/h1&gt;&lt;h2 id=&#34;http协议&#34;&gt;http协议
+&lt;/h2&gt;&lt;p&gt;HTTP协议（超文本传输协议）是用于在Web服务器和客户端之间传输超文本数据的协议。它是TCP/IP协议族的一部分，广泛应用于分布式、协作式和超媒体信息系统。HTTP基于请求/响应模式，是一种无状态协议，意味着每个请求/响应交换是独立的，服务器不会保存任何关于客户端之前请求的信息。在url请求的最前面就会有http协议，http也分为1.0，1.1，2.0。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;1.0是无连接，无状态的，无连接是每次请求都要建立连接，需要使用 keep-alive 参数建立长连接、http1.1默认长连接keep-alive，无法复用连接，每次发送请求都要进行TCP连接，TCP的连接释放都比较费事，会导致网络利用率低。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;1.1是无状态，长连接，所以是现在广泛使用的&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;2.0是基于https的，它比1.1更加安全，http2.0会压缩头部header，例如如果同时多个请求其头部一样或相似，那么协议会消除重复部分&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;状态码&#34;&gt;状态码
+&lt;/h2&gt;&lt;p&gt;HTTP状态码是服务器返回给客户端的3位数字代码，用于表示请求的结果。状态码分为五类：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;1xx - 信息性状态码：表示请求已接收、继续处理。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;2xx - 成功状态码：表示请求成功，例如200 OK。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;3xx - 重定向状态码：表示需要客户端采取进一步行动，例如301永久重定向。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;4xx - 客户端错误状态码：表示客户端的请求有误，例如404 Not Found。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;5xx - 服务器错误状态码：表示服务器无法处理请求，例如500 Internal Server Error。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;主要两种请求方式&#34;&gt;主要两种请求方式
+&lt;/h2&gt;&lt;p&gt;主要分为get请求和post请求&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;get请求
+用于请求服务器发送资源，get意思是取，相当于从从服务器取得资源。多次发送GET请求不会改变资源的状态。
+请求头中的主要字段包括：&lt;/p&gt;
+&lt;p&gt;Host：指定请求的服务器的域名。
+Accept：指定客户端能够接收的内容类型。
+Content-Type：指定客户端发送的数据类型。
+Cookie：存储在客户端的会话信息。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;post请求
+用于向服务器提交数据。post意思是贴，相当于向服务器传送数据，POST请求通常用于创建或更新资源。
+请求头中的主要字段包括：&lt;/p&gt;
+&lt;p&gt;Host：指定请求的服务器的域名。
+Accept：指定客户端能够接收的内容类型。
+Content-Type：指定客户端发送的数据类型，如application/x-www-form-urlencoded。
+Content-Length：指定请求体的长度。
+Authorization：用于认证的凭证信息，比如token数据。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;各个请求头的含义&#34;&gt;各个请求头的含义
+&lt;/h2&gt;&lt;p&gt;一个典型的HTTP请求报文由以下部分组成：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;请求行：包括方法（如GET、POST）、路径（如/workshop/api/mechanic/mechanic_report）和HTTP版本（如HTTP/1.1）。
+请求头：包含各种元数据，如Host、Accept、Content-Type等。
+空行：用于分隔请求头和请求体。
+请求体：通常用于POST请求，携带要提交的数据，get请求的数据一般跟在路径后，比如/api/mechanic/mechanic_report?x=1这种。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;常见请求头字段含义&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Host：指定请求的服务器的域名。
+Accept：指定客户端能够接收的内容类型，如text/html、application/json。
+Content-Type：指定客户端发送的数据类型，如application/x-www-form-urlencoded、application/json。
+Content-Length：指定请求体的长度。
+Authorization：提供认证信息，如Bearer token。
+Cookie：用于发送会话信息，维持登录状态。
+User-Agent：标识客户端软件的信息，服务器可以通过这个字段了解客户端的软件环境。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;linux操作&#34;&gt;linux操作
+&lt;/h2&gt;&lt;p&gt;文件，目录，软连接的操作&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;创建文件：touch file.txt
+创建目录：mkdir 目录名称
+删除文件：rm file.txt
+删除目录：rmdir 目录名称（需要目录为空）
+移动文件或目录：mv file1 目录名称/ 或 mv 目录名称1 目录名称2
+复制文件或目录：cp file1 file2 或 cp -r 目录名称1 目录名称2（递归复制）
+查看文件内容：cat file.txt
+查看目录内容：ls
+查看文件权限：ls -l
+修改文件权限：chmod 755 file.txt 分为文件所有者、用户组、其它用户，每一个都能拥有读写执行权(r,w,x),7代表给文件所有者的权限为4+2+1其中r为4，w为2，x为1，5为r为4，w为0，x为1。
+修改文件所有者：chown user:group file.txt eg：1.chown newuser filename 将filename所有者权限改为newuser 2 chown newuser:newgroup filename  这个命令将文件将filename所有者改为newuser，且将组改为newgroup
+创建软链接：ln -s /path/to/original /path/to/link
+创建硬链接：ln /path/to/original /path/to/link&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;用户和权限管理&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;添加用户：useradd username
+删除用户：userdel username
+修改用户密码：passwd username
+查看用户列表：who 或 w
+查看当前用户：whoami
+切换用户：su - username 或 su username
+** groupadd/groupdel/groupmod 用于管理用户组**&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;系统信息和监控&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;查看系统信息：uname -a
+查看系统负载：top 或 htop
+查看进程列表：ps 或 pstree
+查看网络流量：ifconfig 或 ip
+查看磁盘使用情况：df -h
+查看日志文件：journalctl&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;文本处理命令&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;sed：用于流编辑，可以进行查找、替换、插入等操作。
+eg：nl /etc/passwd | sed &amp;lsquo;2d&amp;rsquo;    //删除第二行&lt;/p&gt;
+&lt;p&gt;​            sed &amp;lsquo;2a drink tea&amp;rsquo;    //在第二行下面追加一行&amp;quot;drink tea&amp;quot;，a代表append&lt;/p&gt;
+&lt;p&gt;​            sed -n &amp;lsquo;5,7p&amp;rsquo;　　//选取第5到7行输出，必须加-n参数，不然效果就是所有行都被输出，而5到7行输出两次。&lt;/p&gt;
+&lt;p&gt;​            sed &amp;lsquo;2,5c No 2&lt;del&gt;5 lines&amp;rsquo;　　//将第2到5行替换为一行字符串&amp;quot;No 2&lt;/del&gt;5 lines&amp;quot;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;awk：用于模式扫描和处理语言，适用于处理文本和数据。
+eg：awk &amp;lsquo;{print $1}&amp;rsquo; file.txt 此处&amp;rsquo;print’表示awk程序，而file.txt则为输入的文件名称。
+grep：用于搜索文件中匹配特定模式的文本行。
+eg：grep [option] pattern file&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;SSH远程登录&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;启动SSH客户端：ssh username@host
+端口转发：ssh -L local_port:remote_host:remote_port username@host
+密码less登录：ssh-keygen 生成密钥对，ssh-copy-id 将公钥复制到远程服务器
+计划任务
+使用cron：crontab -e 编辑crontab文件，设置定时任务。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;对web的认知&#34;&gt;对web的认知
+&lt;/h2&gt;&lt;p&gt;Web渗透测试是一个专门研究如何发现和利用Web应用程序中的安全漏洞的领域。它涉及到对Web服务器、应用程序代码、数据库和整体网络环境的安全性评估。Web渗透测试的主要目的是为了发现可能被攻击者利用的漏洞，以便提前进行修复，确保Web系统的安全性。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;信息收集&lt;/strong&gt;：通过黑暗搜索引擎、社交媒体等渠道收集目标网站的信息，包括网站组成、技术组成、人员信息等。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;静态网页分析&lt;/strong&gt;：对Web应用的HTML、CSS、JavaScript代码进行审查，寻找编码错误、敏感信息泄露等问题。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;动态分析&lt;/strong&gt;：通过与Web应用交互，模拟用户的行为，进行功能测试和漏洞探测。这可能包括SQL注入、XSS攻击、CSRF攻击等。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;源码分析&lt;/strong&gt;：如果是黑盒测试，也可以通过代码审计进行判断，如果不是黑盒也可以制造出黑盒来，比如通过前端中的一些信息可以找到搭建的框架的名称或者是网上有对应的源码，下载下来即可代码审计，如果是框架可以寻找网上的公开漏洞。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;抓包分析&lt;/strong&gt;：通过burpsuite，hiddler，charles等软件进行抓包，可以尝试对前端进行绕过，比如登录时若采取javascript语言进行验证，则可以通过抓包绕过验证，但是如果是后端用php语言进行验证则不能成功。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;封包软件&lt;/strong&gt;：通过封包整体测试触发事件数据包&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;编码问题&lt;/strong&gt;：大多flag会由编码进行加密，我们需要用解密来将其提取出来，如base64编码特征是结尾通常有个=号&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;多站点&lt;/strong&gt;：可能出现一个地址不同端口不同网站的问题，这个时候可以用黑暗引擎去扫描也可使用软件去探测。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;网站扫描&lt;/strong&gt;：在web渗透中，我们可以使用域名扫描去探测它们所有的域名，有些域名中就是关键。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;漏洞扫描&lt;/strong&gt;：使用自动化工具对Web应用进行安全扫描，识别已知的漏洞。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;利用测试&lt;/strong&gt;：对发现的漏洞进行实际利用，以验证漏洞的影响范围和严重程度。&lt;/li&gt;
+&lt;/ol&gt;
+</description>
         </item>
         <item>
         <title>关于</title>
