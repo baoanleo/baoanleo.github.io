@@ -462,7 +462,10 @@ $$</description>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://baoanleo.github.io/p/</guid>
-        <description>&lt;h1 id=&#34;task0&#34;&gt;task0
+        <description>&lt;p&gt;title = &amp;lsquo;Newnewnew&amp;rsquo;
+date = 2024-09-17T17:46:38+08:00
+draft = true&lt;/p&gt;
+&lt;h1 id=&#34;task0&#34;&gt;task0
 &lt;/h1&gt;&lt;h2 id=&#34;http协议&#34;&gt;http协议
 &lt;/h2&gt;&lt;p&gt;HTTP协议（超文本传输协议）是用于在Web服务器和客户端之间传输超文本数据的协议。它是TCP/IP协议族的一部分，广泛应用于分布式、协作式和超媒体信息系统。HTTP基于请求/响应模式，是一种无状态协议，意味着每个请求/响应交换是独立的，服务器不会保存任何关于客户端之前请求的信息。在url请求的最前面就会有http协议，http也分为1.0，1.1，2.0。&lt;/p&gt;
 &lt;ul&gt;
