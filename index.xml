@@ -14,6 +14,20 @@
         
         <guid>https://baoanleo.github.io/p/testimg/</guid>
         <description>&lt;p&gt;image = &amp;ldquo;懒羊羊.jpg&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://baoanleo.github.io/p/testimg/%E6%87%92%E7%BE%8A%E7%BE%8A.jpg&#34;
+	width=&#34;1170&#34;
+	height=&#34;654&#34;
+	srcset=&#34;https://baoanleo.github.io/p/testimg/%E6%87%92%E7%BE%8A%E7%BE%8A_hu15174375200295242073.jpg 480w, https://baoanleo.github.io/p/testimg/%E6%87%92%E7%BE%8A%E7%BE%8A_hu2818025425639478489.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Photo by Florian Klauer on Unsplash&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;178&#34;
+		data-flex-basis=&#34;429px&#34;
+	
+&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
